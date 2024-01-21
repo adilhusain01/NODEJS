@@ -22,3 +22,5 @@ const newItems = _.flattenDeep(items);
 console.log(newItems);
 
 //npm i nodemon -D [-D for dev dependency]
+//Just for development purpose needed not by the application, Well remove it later
+//NODEMON for dont restarting the app every time we update something

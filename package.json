@@ -3,6 +3,9 @@
   "dependencies": {
     "lodash": "^4.17.21"
   },
+  "scripts":{
+     "start": "nodemon app.js"
+  },
   "devDependencies": {
     "nodemon": "^3.0.3"
   }
