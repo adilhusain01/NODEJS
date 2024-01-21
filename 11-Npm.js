@@ -4,6 +4,8 @@
 // local dependency - use it only in this project
 // npm i <package_name>
 
+// remove package -> npm uninstall <package_name>
+
 // global dependency - use it in any package
 // npm install -g <package_name>
 
@@ -24,3 +26,5 @@ console.log(newItems);
 //npm i nodemon -D [-D for dev dependency]
 //Just for development purpose needed not by the application, Well remove it later
 //NODEMON for dont restarting the app every time we update something
+
+//NPX - Executable
