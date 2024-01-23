@@ -6,7 +6,7 @@
 
 // console.log("starting the first task");
 
-// const first = readFile("text.txt", "utf-8", (err, result) => {
+// const first = readFile("./content/first.txt", "utf-8", (err, result) => {
 //   if (err) {
 //     console.log(err);
 //     return;

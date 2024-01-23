@@ -1,18 +1,21 @@
-const { readFile, writeFile } = require("fs");
-const http = require("http");
+const { readFile } = require("fs");
+const path = require("path");
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.end("This is the Home Page");
-  }
+const getText = (path) => {
+  return new Promise((resolve, reject) => {
+    readFile(path, "utf-8", (err, result) => {
+      if (err) {
+        reject(err);
+        return;
+      } else {
+        resolve(result);
+      }
+    });
+  });
+};
 
-  if (req.url === "/about") {
-    res.end("We are 8000 years old");
-  }
-
-  res.end("Error Page");
-});
-
-server.listen(5000, () => {
-  console.log("Server listening on port 5000");
-});
+getText("./content/first.txt")
+  .then((result) => console.log(result))
+  .catch((err) => {
+    console.log();
+  });
