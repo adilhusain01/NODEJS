@@ -1,3 +1,5 @@
+// #1
+
 // const http = require("http");
 // const url = require("url");
 
@@ -12,9 +14,24 @@
 //   .listen(5000);
 // ///?year=2018&month=june
 
-const path = require("path");
-const fs = require("fs");
+// #2
 
-const getText = (path) => {
-  return new Promise(() => {});
-};
+// const path = require("path");
+// const fs = require("fs");
+
+// const getText = (path) => {
+//   return new Promise((resolve, reject) => {
+//     fs.readFile(path, "utf-8", (err, result) => {
+//       if (err) {
+//         reject(err);
+//         return;
+//       } else {
+//         resolve(result);
+//       }
+//     });
+//   });
+// };
+
+// getText("./content/first.txt")
+//   .then((result) => console.log(result))
+//   .catch((err) => console.log(err));
