@@ -3,6 +3,8 @@
 //Duplex
 //Transform
 
+//data in chunks instead of the bloats like we have in the async or sync fs
+
 const { createReadStream } = require("fs");
 
 const stream = createReadStream("./content/big-file.txt", {
