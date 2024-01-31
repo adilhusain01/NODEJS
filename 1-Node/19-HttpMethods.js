@@ -10,6 +10,7 @@
 
 //Status Codes
 //200 - request succesful
+//201 - created
 //400 - request error
 //401 - unauthorized request
 //404 - not found
