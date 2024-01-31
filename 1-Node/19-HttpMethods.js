@@ -13,3 +13,4 @@
 //400 - request error
 //401 - unauthorized request
 //404 - not found
+//500 - server error
