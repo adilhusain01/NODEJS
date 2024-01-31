@@ -2,7 +2,8 @@ const http = require("http");
 
 const {readFileSync} = require("fs");
 
-const data = readFileSync('./index.html', "utf-8");
+const loginPage = readFileSync('./LoginPage/login.html', "utf-8");
+const pageStyle = readFileSync('./LoginPage/style.css');
 
 http.createServer((req, res) => {
 
@@ -11,12 +12,15 @@ http.createServer((req, res) => {
 
     if(req.url === '/'){
         res.writeHead(200, {'content-type': 'text/html'});
-        res.write(data);
+        res.write(loginPage);
         res.end();
     } else if (req.url === '/about'){
         res.writeHead(200, {'content-type': 'text/plain'});
         res.write(`AboutPage`);
         res.end();
+    } else if (req.url === '/style.css'){
+        res.writeHead(200, {'content-type': 'text/css'});
+        res.end(pageStyle);
     } else {
         res.writeHead(404, {'content-type': 'text/plain'});
         res.write("Page not found");
