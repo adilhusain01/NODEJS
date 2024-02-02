@@ -11,6 +11,7 @@ http.createServer((req, res) => {
     // console.log(req.url);
 
     if(req.url === '/'){
+        //These are called mime types in the content-types tag
         res.writeHead(200, {'content-type': 'text/html'});
         res.write(loginPage);
         res.end();
