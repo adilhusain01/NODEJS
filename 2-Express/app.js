@@ -2,7 +2,7 @@
 //server side rendering 
 
 const express = require("express");
-const { products} = require("./public/products");
+const { products} = require("./public/data");
 
 const app = express();
 
