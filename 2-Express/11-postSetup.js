@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 
 const app = express();
-const { people } = require("./public/daata");
+const { people } = require("./public/data");
 
 //static assets
 app.use(express.static('./public/methods-public'));
