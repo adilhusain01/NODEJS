@@ -1,3 +1,10 @@
 const products = [{"id":"1","name":"accent chair","price":25999,"image":"https://www.course-api.com/images/store/product-1.jpeg","colors":["#ff0000","#00ff00","#0000ff"],"company":"marcos","description":"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge","category":"office","shipping":true},{"id":"2","name":"albany sectional","price":109999,"image":"https://www.course-api.com/images/store/product-2.jpeg","colors":["#000","#ffb900"],"company":"liddy","description":"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge","category":"living room"},{"id":"3","name":"albany table","price":309999,"image":"https://www.course-api.com/images/store/product-3.jpeg","colors":["#ffb900","#0000ff"],"company":"liddy","description":"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge","category":"kitchen"}]
 
-module.exports = { products }
+const people = [
+    {id:1, name: 'john'}
+    {id:2, name: 'peter'}
+    {id:3, name: 'susan'}
+    {id:4, name: 'anna'}
+    {id:5, name: 'emma'}
+]
+module.exports = { products, people }
