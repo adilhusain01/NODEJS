@@ -11,10 +11,6 @@ app.use(express.static('./public/methods-public'));
 //based on body-parser
 app.use(express.urlencoded({extended: false}));
 
-app.get('/', (req, res) => {
-    res.send(`<a href = "/api/people" >Click here</a>`);
-});
-
 app.post('/login', (req, res) => {
     const { name } = req.body;
     if(name){
