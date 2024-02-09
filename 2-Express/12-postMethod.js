@@ -34,10 +34,10 @@ app.get('/api/people', (req, res) => {
 
 app.post('/api/people', (req, res) => {
     const { name } = req.body;
-    if(!name){
-        res.status(400).json({success:false});
+    if(name){
+        res.status(200).send(` Welcome ${name} `);
     }else{
-        res.status(201).json({success:true, msg:'Please provide name'});
+        res.status(404).json({success:true, msg:'Please provide name'});
     }
 })
 
