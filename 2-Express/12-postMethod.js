@@ -15,10 +15,6 @@ app.use(express.urlencoded({extended: false}));
 //addedd to the req.body
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send(`<a href = "/api/people" >Click here</a>`);
-});
-
 app.post('/login', (req, res) => {
     const {name} = req.body;
     if(name){
@@ -29,12 +25,7 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/api/people', (req, res) => {
-    const {name} = req.body;
-    if(name){
-        res.status(200).send({success:true, msg:`Welcome ${name}`});
-    }else{
-        res.status(400).send({success:false, msg:"Please provide name"});
-    }
+    res.status(200).json({success:true, data:people});
 })
 
 app.post('/api/people/postman', (req, res) => {
