@@ -1,5 +1,6 @@
-const express = require("express");
+//find method
 
+const express = require("express");
 const { people } = require('./public/data');
 
 const app = express();
