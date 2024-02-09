@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { name } = req.body;
+    const {name} = req.body;
     if(name){
         res.status(200).send(`Welcome ${name}`);
     }else{
@@ -29,16 +29,31 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/api/people', (req, res) => {
-    res.status(200).json({success: true, data: people});
+    const {name} = req.body;
+    if(name){
+        res.status(200).send({success:true, msg:`Welcome ${name}`});
+    }else{
+        res.status(400).send({success:false, msg:"Please provide name"});
+    }
+})
+
+app.post('/api/postman/people/', (req, res) => {
+    const {name} = req.body;
+    if(name){
+        res.status(200).send({success:true, data: [...people, name]});
+    }else{
+        res.status(400).send({success:false, msg:"Please provide name"});
+    }
+    
 })
 
 app.post('/api/people', (req, res) => {
     const { name } = req.body;
     if(name){
-        res.status(200).send(` Welcome ${name} `);
+        res.status(200).send({success:true, msg: ` Welcome ${name} `});
     }else{
-        res.status(404).json({success:true, msg:'Please provide name'});
-    }
+        res.status(400 ).json({success:true, msg:'Please provide name'});
+    } 
 })
 
 app.listen(8000, () => console.log(`Server running on port 8000`));
