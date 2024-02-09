@@ -4,11 +4,7 @@ const { people } = require('./public/data');
 
 const app = express();
 
- app.use(express.json());
-
-app.get('/', (req, res) => {
-    res.status(200).send({success: true});
-})
+app.use(express.json());
 
 app.put('/api/people/:id', (req, res) => {
     const { id } = req.params;
