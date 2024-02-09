@@ -37,7 +37,7 @@ app.get('/api/people', (req, res) => {
     }
 })
 
-app.post('/api/postman/people/', (req, res) => {
+app.post('/api/people/postman', (req, res) => {
     const {name} = req.body;
     if(name){
         res.status(200).send({success:true, data: [...people, name]});
